@@ -1,1 +1,1 @@
-# Mood-Restaurant-Recommendation
+# Rest-Occasions-Recommendation
