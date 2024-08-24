@@ -1,44 +1,65 @@
-# Mood2Restaurant
+# Recipe-Share
 
-Mood2Restaurant is a web application that recommends top-rated restaurants based on the user's mood or occasion type. Whether you're feeling adventurous, looking for a romantic dinner spot, or just craving comfort food, Mood2Restaurant has got you covered.
+Recipe-Share is a web application that helps users discover and share recipes based on their ingredients, preferences, and trending options. Whether you're looking to try something new or make the most of what you have in your kitchen, Recipe-Share is your go-to tool for culinary inspiration.
 
 ## Features
 
-- **Mood-Based Recommendations**: Get restaurant suggestions tailored to your current mood or specific occasions.
-- **User-Friendly Interface**: Simple and intuitive design for an enjoyable user experience.
-- **Extensive Database**: Access to a wide range of restaurants, ensuring diverse and quality recommendations.
-- **Personalized Suggestions**: Save your favorite restaurants and receive personalized recommendations based on your preferences.
+- **Trending Recipes**: Get suggestions for popular and trending recipes to inspire your next meal.
+- **Ingredient-Based Suggestions**: Enter available ingredients to receive recipe recommendations tailored to what you have on hand.
+- **Recipe Saving and Sharing**: Save your favorite recipes and share them with friends or the Recipe-Share community.
+- **User-Friendly Interface**: Enjoy an intuitive design for easy recipe browsing and organization.
 
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/Mood2Restaurant.git
+    ```bash
+    git clone https://github.com/yourusername/Recipe-Share.git
+    ```
+
 2. Navigate to the project directory:
-   ```bash
-   cd Mood2Restaurant
+    ```bash
+    cd Recipe-Share
+    ```
+
 3. Install dependencies:
-   ```bash
-   npm install
+    ```bash
+    npm install
+    ```
+
 4. Start the development server:
-   ```bash
-   npm start
+    ```bash
+    npm start
+    ```
 
 ## Usage
-- Open your browser and navigate to http://localhost:3000.
-- Select your current mood or occasion from the provided options.
-- Browse through the recommended restaurants and choose your favorite.
-- Save and organize your preferred restaurants for future reference.
+
+- Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+- Use the search feature to find recipes based on ingredients or browse through trending options.
+- Save your favorite recipes to your profile and share them with others.
+- Access and manage your saved recipes from your user dashboard.
 
 ## Technologies Used
 
-- **Frontend**: Vite, React.js, HTML, CSS, JavaScript
+- **Frontend**: React.js, Vite, HTML, CSS, JavaScript
+- **Backend**: Node.js with Express for API development (planned feature)
+- **Database**: MongoDB for storing user data and recipes (planned feature)
+- **APIs**: Integration with third-party recipe APIs (e.g., Spoonacular) for recipe data (planned feature)
 
 ## Future Development
 
-- **Restaurant API**: Working on creating a custom restaurant API to enhance the recommendation engine with more accurate and up-to-date data.
+- **Custom Recipe API**: Developing a custom API to enhance recipe recommendations with more accurate and personalized data.
+- **Advanced Search Filters**: Adding more sophisticated search options and filters to refine recipe suggestions.
 
 ## Contributing
 
-- We welcome contributions from the community! To contribute, please fork the repository, create a new branch for your feature or bugfix, and submit a pull request.
+We welcome contributions from the community! To contribute, please fork the repository, create a new branch for your feature or bugfix, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Special thanks to the open-source community for the libraries and tools used in this project.
+- Acknowledgment to the APIs providing recipe data.
 
