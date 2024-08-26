@@ -1,0 +1,28 @@
+.recipeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .folder, .createButton {
+    flex: 0 0 calc(25% - 25px);
+    box-sizing: border-box;  /* padding/border are included in width */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .folder h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .folder p {
+    margin: 0;
+    color: #555;
+  }
+  
+  /* Existing styles for recipes */
+  
