@@ -1,20 +1,49 @@
 .filters {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding-bottom: 20px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    color: var(--text-primary);
-    font-size: 14px;
-  }
-  
-  .button:hover {
-    background-color: #ddd;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.centerBtn {
+  display: flex;
+  width: 80%;
+  gap: 15px;
+  border-top: 1px solid var(--tertiary-color);
+  padding: 60px 0px;
+  position: relative;
+}
+
+.btnGroup {
+  width: 100%;
+}
+
+.results {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.custombtn {
+  padding: 10px 20px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #ddd;
+}

@@ -1,59 +1,226 @@
-import React from 'react';
-import styles from './FilterButtons.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import styles from "./FilterButtons.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function FilterButtons() {
   return (
     <div className={styles.filters}>
-      <div className="btn-group">
+      <div className={styles.centerBtn}>
+      <div className={styles.results}>
+        <div>Filter Results</div>
+        <div>0 items</div>
+      </div>
+      <div className={styles.btnGroup}>
         <button
-          className="btn btn-secondary dropdown-toggle"
+          className={styles.custombtn}
           type="button"
           id="dropdownIngredients"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Ingredients
+          Popular
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownIngredients">
-          <li><a className="dropdown-item" href="#">Vegetables</a></li>
-          <li><a className="dropdown-item" href="#">Fruits</a></li>
-          <li><a className="dropdown-item" href="#">Dairy</a></li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Quick
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Easy
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Weeknight Meals
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Breakfast
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Lunch
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Dinner
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Dessert
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Main
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Side
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Starter
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Snack
+            </a>
+          </li>
         </ul>
       </div>
 
-      <div className="btn-group">
+      <div className={styles.btnGroup}>
         <button
-          className="btn btn-secondary dropdown-toggle"
+          className={styles.custombtn}
           type="button"
           id="dropdownCuisine"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Cuisine
+          Diets
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownCuisine">
-          <li><a className="dropdown-item" href="#">Italian</a></li>
-          <li><a className="dropdown-item" href="#">Mexican</a></li>
-          <li><a className="dropdown-item" href="#">Chinese</a></li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Vegetarian
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Vegan
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Gluten Free
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Dairy Free
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Nut Free
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Keto
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Raw
+            </a>
+          </li>
         </ul>
       </div>
 
-      <div className="btn-group">
+      <div className={styles.btnGroup}>
         <button
-          className="btn btn-secondary dropdown-toggle"
+          className={styles.custombtn}
           type="button"
           id="dropdownTotalTime"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Total Time
+          Cuisines
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownTotalTime">
-          <li><a className="dropdown-item" href="#">30 minutes</a></li>
-          <li><a className="dropdown-item" href="#">1 hour</a></li>
-          <li><a className="dropdown-item" href="#">2 hours</a></li>
+          <li>
+            <a className="dropdown-item" href="#">
+              African
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              East African
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              North African
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              West African
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              American
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Asian
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              East Asian
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              South Asian
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Southeast Asian
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Caribbean
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              European
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Latin American
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Central American
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              South American
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Mediterranean
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Middle Eastern
+            </a>
+          </li>
         </ul>
+      </div>
       </div>
     </div>
   );
