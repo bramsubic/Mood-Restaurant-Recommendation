@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './ImportRecipe.module.css';
 
-function ImportRecipeButton() {
+function ImportRecipeButton({ openModal }) {
   return (
-    <button className={styles.importButton}>Import Recipe</button>
+    <button className={styles.importButton} onClick={openModal}>
+      Import Recipe
+    </button>
   );
 }
 
