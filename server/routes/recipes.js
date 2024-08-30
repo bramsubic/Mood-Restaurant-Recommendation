@@ -6,6 +6,11 @@ const Recipe = require('../models/Recipe');
 router.post('/', async (req, res) => {
   console.log('Received Recipe Data:', req.body); // Log received data
   try {
+    // Ensure that `title` field is present in request body
+    if (!req.body.title) {
+      return res.status(400).json({ message: 'Title is required' });
+    }
+
     const recipe = new Recipe(req.body);
     await recipe.save();
     console.log('Recipe Created:', recipe); // Log created recipe
@@ -19,7 +24,7 @@ router.post('/', async (req, res) => {
 // Get all recipes
 router.get('/', async (req, res) => {
   try {
-    const recipes = await Recipe.find().populate('cookbooks');
+    const recipes = await Recipe.find();
     console.log('All Recipes:', recipes); // Log all recipes
     res.json(recipes);
   } catch (err) {
@@ -31,7 +36,7 @@ router.get('/', async (req, res) => {
 // Get a single recipe by ID
 router.get('/:id', async (req, res) => {
   try {
-    const recipe = await Recipe.findById(req.params.id).populate('cookbooks');
+    const recipe = await Recipe.findById(req.params.id);
     if (!recipe) return res.status(404).json({ message: 'Recipe not found' });
     console.log('Fetched Recipe:', recipe); // Log fetched recipe
     res.json(recipe);

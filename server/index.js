@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const recipeRoutes = require('./routes/recipes');
-const cookbookRoutes = require('./routes/cookbooks');
+// const cookbookRoutes = require('./routes/cookbooks');
 
 dotenv.config();
 
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 // Routes 
 app.use('/recipes', recipeRoutes);
-app.use('/cookbooks', cookbookRoutes);
+// app.use('/cookbooks', cookbookRoutes);
 
 
 // Start the server

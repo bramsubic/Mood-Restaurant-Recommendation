@@ -22,9 +22,9 @@ const Nav = () => {
               <Link to="/" className={`${styles.logo}`}>
                 Cookbook{" "}
               </Link>
-              <Link to="/login" className={`${styles.login}`}>
+              {/* <Link to="/login" className={`${styles.login}`}>
                 Sign In{" "}
-              </Link>
+              </Link> */}
           </div>
           <div className={`${styles.navbar}`}>
             <ul
@@ -56,7 +56,7 @@ const Nav = () => {
                 </Link>
               </li>
             </ul>
-            <SearchBar />
+            {/* <SearchBar /> */}
           </div>
           <div
             className={`${styles.hamburger} ${isActive ? styles.active : ""}`}

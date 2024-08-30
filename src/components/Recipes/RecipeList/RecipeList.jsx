@@ -1,49 +1,59 @@
-import React, { useState } from "react";
-// import RecipeItem from '../RecipeItem/RecipeItem';
-// import CreateCookbook from '../CreateCookbook/CreateCookbook';
-import styles from "./RecipeList.module.css";
+// src/components/RecipeList.jsx
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function RecipeList() {
-  const [recipes, setRecipes] = useState([
-    { id: 1, name: "Spaghetti Carbonara" },
-    // Add initial recipes or start with an empty array
-  ]);
+const RecipeList = () => {
+  const [recipes, setRecipes] = useState([]);
 
-  const [folders, setFolders] = useState([
-    { id: 1, name: "All Recipes", isPrivate: false },
-    { id: 2, name: "Breakfast", isPrivate: false },
-    { id: 3, name: "Lunch", isPrivate: false },
-    { id: 4, name: "Dinner", isPrivate: false },
-  ]);
-
-  const handleCreateFolder = (newFolder) => {
-    setFolders([...folders, { ...newFolder, id: folders.length + 1 }]);
+  const fetchRecipes = async () => {
+    try {
+      const response = await axios.get('http://localhost:5001/recipes');
+      setRecipes(response.data);
+    } catch (error) {
+      console.error('Error fetching recipes:', error);
+    }
   };
 
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
+
   return (
-    <div className={styles.recipeList}>
-      {/* Create a new folder (cookbook) */}
-      <div className={styles.centerBtn}>
-      <div className={styles.recipeHeader}>Cookbooks</div>
-        {/* <div className={styles.createButton}>
-      <CreateCookbook onCreate={handleCreateFolder} />
-      </div> */}
-
-        {/* Display folders */}
-        {folders.map((folder) => (
-          <div key={folder.id} className={styles.folder}>
-            <h2>{folder.name}</h2>
-            <p>{folder.count}0 recipes</p>
-          </div>
+    <div>
+      <h2>Recipes</h2>
+      <ul>
+        {recipes.map(recipe => (
+          <li key={recipe._id}>{recipe.title}</li>
         ))}
-
-        {/* Display individual recipes */}
-        {/* {recipes.map((recipe) => (
-        <RecipeItem key={recipe.id} recipe={recipe} />
-      ))} */}
-      </div>
+      </ul>
     </div>
   );
-}
+};
 
 export default RecipeList;
+
+
+// import React from 'react';
+// import RecipeItem from '../RecipeItem/RecipeItem'; 
+// import styles from './RecipeList.module.css';
+
+// function RecipeList({ recipes, onEdit, onDelete }) {
+//   return (
+//     <div className={styles.recipeList}>
+//       {recipes.length > 0 ? (
+//         recipes.map((recipe) => (
+//           <RecipeItem
+//             key={recipe._id}
+//             recipe={recipe}
+//             onEdit={() => onEdit(recipe)}
+//             onDelete={() => onDelete(recipe._id)}
+//           />
+//         ))
+//       ) : (
+//         <p>No recipes found.</p>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default RecipeList;

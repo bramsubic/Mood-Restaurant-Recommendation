@@ -6,6 +6,9 @@ const request = async (endpoint, method = 'GET', body = null) => {
     'Content-Type': 'application/json',
   };
 
+  console.log(`Making ${method} request to ${BASE_URL}/${endpoint}`);
+  console.log('Request body:', body);
+
   const response = await fetch(`${BASE_URL}/${endpoint}`, {
     method,
     headers,
@@ -13,6 +16,9 @@ const request = async (endpoint, method = 'GET', body = null) => {
   });
 
   if (!response.ok) {
+    console.error(`HTTP error! Status: ${response.status}`);
+    const errorText = await response.text();
+    console.error('Response body:', errorText);
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
 
@@ -20,10 +26,17 @@ const request = async (endpoint, method = 'GET', body = null) => {
 };
 
 // API functions
-export const createRecipe = (recipe) => request('recipes', 'POST', recipe);
+export const createRecipe = (recipe) => {
+  console.log('Creating recipe with data:', recipe);
+  return request('recipes', 'POST', recipe);
+};
+
 export const getRecipes = () => request('recipes');
 export const getRecipeById = (id) => request(`recipes/${id}`);
-export const updateRecipe = (id, recipe) => request(`recipes/${id}`, 'PUT', recipe);
+export const updateRecipe = (id, recipe) => {
+  console.log('Updating recipe with id:', id, 'and data:', recipe);
+  return request(`recipes/${id}`, 'PUT', recipe);
+};
 export const deleteRecipe = (id) => request(`recipes/${id}`, 'DELETE');
 
 export const getCookbooks = () => request('cookbooks');
