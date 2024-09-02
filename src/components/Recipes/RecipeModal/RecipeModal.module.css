@@ -1,0 +1,8 @@
+.modalOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 30px 40px;
+}

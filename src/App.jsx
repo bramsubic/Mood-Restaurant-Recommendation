@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import PlanPage from './pages/PlanPage';
 import Nav from './components/Nav/Nav'
 import RecipePage from './pages/RecipePage';
+import IndividualRecipePage from "./pages/IndividualRecipePage";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/explore' element={<ExplorePage />} />
         <Route path='/plan' element={<PlanPage />} />
         <Route path='/recipes' element={<RecipePage />} />
+        <Route path="/recipes/:id" element={<IndividualRecipePage />} />
       </Routes>
     </Router>
   )
